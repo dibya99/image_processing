@@ -23,8 +23,8 @@ int main(int argc,char **argv)
 vector<Vec4i> hierarchy;
 
   namedWindow("W1",WINDOW_FREERATIO);
-  namedWindow("W2",WINDOW_FREERATIO);
   createTrackbar("h","W2",&h,255,NULL);
+  //namedWindow("W2",WINDOW_FREERATIO);
   createTrackbar("hm","W2",&hm,255,NULL);
   createTrackbar("s","W2",&s,255,NULL);
   createTrackbar("sm","W2",&sm,255,NULL);
@@ -40,9 +40,9 @@ vector<Vec4i> hierarchy;
 
   /// Apply the erosion operation
   erode( gray, gray, element );
-    imshow("W2",gray);
+    //imshow("W2",gray);
     Canny(gray,cannyout,lthres,3*lthres);
-    imshow("W3",cannyout);
+    //imshow("W3",cannyout);
     findContours( cannyout, contours, hierarchy,
     RETR_CCOMP, CHAIN_APPROX_SIMPLE );
 // iterate through all the top-level contours,
@@ -59,19 +59,18 @@ vector<RotatedRect> minRect( contours.size() );
 for( size_t i = 0; i < contours.size(); i++ )
      {
         minRect[i] = minAreaRect( Mat(contours[i]) );
+        P[i]=minRect[i].center;
     }
-    for( size_t i = 0; i< contours.size(); i++ )
+  /*  for( size_t i = 0; i< contours.size(); i++ )
    {
-     Scalar color = Scalar( 0,0,255) ;
+     Scalar color = Scalar( 0,255,0) ;
      Point2f rect_points[4]; minRect[i].points( rect_points );
      for( int j = 0; j < 4; j++ )
         line( img, rect_points[j], rect_points[(j+1)%4], color,1,8);
-   }
-   for(size_t i=0;i<contours.size();i++)
-   {
+   }*/
+
      //cout<<contours.size();
-     P[i]=minRect[i].center;
-  }
+
 
 for(size_t i=0;i<contours.size();i++)
 {
@@ -88,7 +87,20 @@ for(size_t i=0;i<contours.size();i++)
 }
 Point2f Cent((midx+minx)/2,miny);
 cout<<Cent<<endl;
-circle(img,Cent,10,(255,0,0),-1,8);
+//circle(img,Cent,10,(255,0,0),-1,8);
+Point2f A[4];
+Point2f B[4];
+for(size_t i=0;i<contours.size();i++)
+{
+  Point2f z;
+  z=minRect[i].center;
+  if(int(z.x)==minx)
+  minRect[i].points(A);
+  else if(int(z.x)==midx)
+  minRect[i].points(B);
+}
+Point2f k(B[3].x,A[3].y);
+rectangle(img,A[1],k,Scalar(0,255,0),1,8);
 imshow("W1",img);
     waitKey(0);
 
