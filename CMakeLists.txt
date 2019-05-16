@@ -9,3 +9,6 @@ target_link_libraries( prog_2 ${OpenCV_LIBS} )
 
 add_executable(prog3 src/prog3.cpp )
 target_link_libraries( prog3 ${OpenCV_LIBS} )
+
+add_executable(prog4 src/prog4.cpp )
+target_link_libraries( prog4 ${OpenCV_LIBS} )

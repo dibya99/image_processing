@@ -60,6 +60,43 @@ CMAKE_SOURCE_DIR = /home/dibya/Myprojects/ImageProcessing
 CMAKE_BINARY_DIR = /home/dibya/Myprojects/ImageProcessing/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/prog_2.dir
+
+# All Build rule for target.
+CMakeFiles/prog_2.dir/all:
+	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/depend
+	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dibya/Myprojects/ImageProcessing/build/CMakeFiles --progress-num=5,6 "Built target prog_2"
+.PHONY : CMakeFiles/prog_2.dir/all
+
+# Include target in all.
+all: CMakeFiles/prog_2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/prog_2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dibya/Myprojects/ImageProcessing/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/prog_2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dibya/Myprojects/ImageProcessing/build/CMakeFiles 0
+.PHONY : CMakeFiles/prog_2.dir/rule
+
+# Convenience name for target.
+prog_2: CMakeFiles/prog_2.dir/rule
+
+.PHONY : prog_2
+
+# clean rule for target.
+CMakeFiles/prog_2.dir/clean:
+	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/clean
+.PHONY : CMakeFiles/prog_2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/prog_2.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/prog3.dir
 
 # All Build rule for target.
@@ -97,39 +134,39 @@ clean: CMakeFiles/prog3.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/prog_2.dir
+# Target rules for target CMakeFiles/prog4.dir
 
 # All Build rule for target.
-CMakeFiles/prog_2.dir/all:
-	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/depend
-	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dibya/Myprojects/ImageProcessing/build/CMakeFiles --progress-num=3,4 "Built target prog_2"
-.PHONY : CMakeFiles/prog_2.dir/all
+CMakeFiles/prog4.dir/all:
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/depend
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dibya/Myprojects/ImageProcessing/build/CMakeFiles --progress-num=3,4 "Built target prog4"
+.PHONY : CMakeFiles/prog4.dir/all
 
 # Include target in all.
-all: CMakeFiles/prog_2.dir/all
+all: CMakeFiles/prog4.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/prog_2.dir/rule: cmake_check_build_system
+CMakeFiles/prog4.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dibya/Myprojects/ImageProcessing/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/prog_2.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/prog4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dibya/Myprojects/ImageProcessing/build/CMakeFiles 0
-.PHONY : CMakeFiles/prog_2.dir/rule
+.PHONY : CMakeFiles/prog4.dir/rule
 
 # Convenience name for target.
-prog_2: CMakeFiles/prog_2.dir/rule
+prog4: CMakeFiles/prog4.dir/rule
 
-.PHONY : prog_2
-
-# clean rule for target.
-CMakeFiles/prog_2.dir/clean:
-	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/clean
-.PHONY : CMakeFiles/prog_2.dir/clean
+.PHONY : prog4
 
 # clean rule for target.
-clean: CMakeFiles/prog_2.dir/clean
+CMakeFiles/prog4.dir/clean:
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/clean
+.PHONY : CMakeFiles/prog4.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/prog4.dir/clean
 
 .PHONY : clean
 

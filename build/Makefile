@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named prog_2
+
+# Build rule for target.
+prog_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 prog_2
+.PHONY : prog_2
+
+# fast build rule for target.
+prog_2/fast:
+	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/build
+.PHONY : prog_2/fast
+
+#=============================================================================
 # Target rules for targets named prog3
 
 # Build rule for target.
@@ -124,17 +137,17 @@ prog3/fast:
 .PHONY : prog3/fast
 
 #=============================================================================
-# Target rules for targets named prog_2
+# Target rules for targets named prog4
 
 # Build rule for target.
-prog_2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 prog_2
-.PHONY : prog_2
+prog4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 prog4
+.PHONY : prog4
 
 # fast build rule for target.
-prog_2/fast:
-	$(MAKE) -f CMakeFiles/prog_2.dir/build.make CMakeFiles/prog_2.dir/build
-.PHONY : prog_2/fast
+prog4/fast:
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/build
+.PHONY : prog4/fast
 
 src/prog3.o: src/prog3.cpp.o
 
@@ -162,6 +175,33 @@ src/prog3.s: src/prog3.cpp.s
 src/prog3.cpp.s:
 	$(MAKE) -f CMakeFiles/prog3.dir/build.make CMakeFiles/prog3.dir/src/prog3.cpp.s
 .PHONY : src/prog3.cpp.s
+
+src/prog4.o: src/prog4.cpp.o
+
+.PHONY : src/prog4.o
+
+# target to build an object file
+src/prog4.cpp.o:
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/src/prog4.cpp.o
+.PHONY : src/prog4.cpp.o
+
+src/prog4.i: src/prog4.cpp.i
+
+.PHONY : src/prog4.i
+
+# target to preprocess a source file
+src/prog4.cpp.i:
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/src/prog4.cpp.i
+.PHONY : src/prog4.cpp.i
+
+src/prog4.s: src/prog4.cpp.s
+
+.PHONY : src/prog4.s
+
+# target to generate assembly for a file
+src/prog4.cpp.s:
+	$(MAKE) -f CMakeFiles/prog4.dir/build.make CMakeFiles/prog4.dir/src/prog4.cpp.s
+.PHONY : src/prog4.cpp.s
 
 src/prog_2.o: src/prog_2.cpp.o
 
@@ -197,12 +237,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... prog3"
 	@echo "... prog_2"
+	@echo "... prog3"
+	@echo "... prog4"
+	@echo "... rebuild_cache"
 	@echo "... src/prog3.o"
 	@echo "... src/prog3.i"
 	@echo "... src/prog3.s"
+	@echo "... src/prog4.o"
+	@echo "... src/prog4.i"
+	@echo "... src/prog4.s"
 	@echo "... src/prog_2.o"
 	@echo "... src/prog_2.i"
 	@echo "... src/prog_2.s"
